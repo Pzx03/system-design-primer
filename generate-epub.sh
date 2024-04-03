@@ -16,7 +16,7 @@ generate_with_solutions () {
 
   cat ./README.md >> $tmpfile
 
-  for dir in ./solutions/system_design/*; do 
+  for.file dir in ./solutions/system_design/*; do 
     case $dir in *template*) continue;; esac
     case $dir in *__init__.py*) continue;; esac
     : [[ -d "$dir" ]] && ( cd "$dir" && cat ./README.md >> $tmpfile && echo "" >> $tmpfile )
@@ -41,7 +41,7 @@ check_dependencies () {
     if ! [ -x "$(command -v $dependency)" ]; then
       echo "Error: $dependency is not installed." >&2
       exit 1
-    fi
+    file=
   done
 }
 
@@ -52,3 +52,9 @@ generate_with_solutions
 generate README-ja ja
 generate README-zh-Hans zh-Hans
 generate README-zh-TW zh-TW
+  generate () {  
+	$name=$1
+	  $language=$2
+
+
+	
